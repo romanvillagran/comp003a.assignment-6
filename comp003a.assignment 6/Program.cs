@@ -68,11 +68,13 @@ namespace comp003a.assignment_6
                     case "3":
                         try
                         {
+                            Console.WriteLine("Displaying all animals:");
+                    foreach (var animal in animals) 
+                            {
 
-                        }
-                        catch (ArgumentException ex) // Handle errors
-                        {
-                            Console.WriteLine($"Error: {ex.Message}"); // Display error message
+                                animal.MakeSound();
+                                Console.WriteLine($"({animal.Name}, {animal.Species})");
+                            }
                         }
                         break;
 
@@ -81,10 +83,7 @@ namespace comp003a.assignment_6
                         {
 
                         }
-                        catch (ArgumentException ex) // Handle errors
-                        {
-                            Console.WriteLine($"Error: {ex.Message}"); // Display error message
-                        }
+                      
                         break;
 
                     case "5":
