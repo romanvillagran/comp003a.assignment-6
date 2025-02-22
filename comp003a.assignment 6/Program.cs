@@ -94,13 +94,33 @@ namespace comp003a.assignment_6
                         string describeChoice = Console.ReadLine();
                         switch (describeChoice)
                         {
-                            case "1": // Describe by name
+                            case "1": 
                                 Console.Write("Enter the name: ");
                                 string name = Console.ReadLine();
                                 ZooUtility.DescribeAnimal(name);
                                 break;
 
-                            case "2":
+                            case "2": 
+                                Console.Write("Enter the name: ");
+                                string name2 = Console.ReadLine();
+                                Console.Write("Enter the species: ");
+                                string species2 = Console.ReadLine();
+                                ZooUtility.DescribeAnimal(name2, species2); 
+                                break;
+
+                            case "3": 
+                                Console.Write("Enter the name: ");
+                                string name3 = Console.ReadLine();
+                                Console.Write("Enter the species: ");
+                                string species3 = Console.ReadLine();
+                                Console.Write("Enter the age: ");
+                                int age = int.Parse(Console.ReadLine());
+                                ZooUtility.DescribeAnimal(name3, species3, age); 
+                                break;
+
+                            default:
+                                Console.WriteLine("Invalid choice.");
+                                break;
 
 
 
