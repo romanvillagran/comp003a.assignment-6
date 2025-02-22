@@ -65,15 +65,22 @@ namespace comp003a.assignment_6
                         }
                         break;
 
-                    case "3":
-                        try
+                    case "3": 
+                        Console.WriteLine("Displaying all animals:");
+                        if (animal.Count == 0) 
                         {
-                            Console.WriteLine("Displaying all animals:");
-                    foreach (var animal in animals) 
+                            Console.WriteLine("No animals in the zoo yet!"); 
+                        }
+                        else
+                        {
+                           
+                            for (int i = 0; i < animal.Count; i++) 
                             {
-
-                                animal.MakeSound();
-                                Console.WriteLine($"({animal.Name}, {animal.Species})");
+                                if (animal[i] != null) 
+                                {
+                                    animal[i].MakeSound(); 
+                                    Console.WriteLine($"Name: {animal[i].Name}, Species: {animal[i].Species}"); 
+                                }
                             }
                         }
                         break;
