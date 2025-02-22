@@ -130,6 +130,13 @@ namespace comp003a.assignment_6
                         break;
 
                     case "5":
+                        running = false;
+                        Console.WriteLine("Exiting program.");
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid choice.");
+                        break;
 
 
                 }

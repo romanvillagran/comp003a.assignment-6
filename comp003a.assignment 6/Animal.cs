@@ -19,7 +19,7 @@ namespace comp003a.assignment_6
             {
                 if (string.IsNullOrEmpty(_name))//check is name is empty
                 {
-                    Console.WriteLine("Name cannot be empty or null ");
+                    Console.WriteLine("Name cannot be empty.");
                 }
                 _name = value;
             }
@@ -32,7 +32,7 @@ namespace comp003a.assignment_6
             {
                 if (string.IsNullOrEmpty(_species))
                 {
-                    Console.WriteLine("Name cannot be empty or null ");
+                    Console.WriteLine("Name cannot be empty.");
                 }
                 _species = value;
             }
