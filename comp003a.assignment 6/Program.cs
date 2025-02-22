@@ -48,21 +48,18 @@ namespace comp003a.assignment_6
 
 
 
-                    case "2":
-                        try
-                        {
-                            Console.Write("Enter the name of the Parrot: ");
-                            string parrotName = Console.ReadLine();
-                            Console.Write("Enter the species of the parrot: ");
+                    case "2": 
+                        Console.Write("Enter the name of the parrot: ");
+                        string parrotName = Console.ReadLine(); 
+                        Console.Write("Enter the species of the parrot: ");
+                        string parrotSpecies = Console.ReadLine(); 
 
-                            string parrotSpecies = Console.ReadLine();
+                        Parrot parrot = new Parrot();
+                        parrot.Name = parrotName;
+                        parrot.Species = parrotSpecies; 
 
-                            Parrot parrot = new Parrot { Name = parrotName, Species = parrotSpecies };
-                        }
-                        catch (ArgumentException ex) // Handle errors
-                        {
-                            Console.WriteLine($"Error: {ex.Message}"); // Display error message
-                        }
+                        animal.Add(parrot);
+                        Console.WriteLine("Parrot added successfully!");
                         break;
 
                     case "3":
