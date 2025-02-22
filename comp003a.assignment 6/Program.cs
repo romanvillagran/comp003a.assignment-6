@@ -29,9 +29,9 @@ namespace comp003a.assignment_6
                     case "1":
                         try
                         {
-                            Console.WriteLine("Enter the name of the lion");
+                            Console.Write("Enter the name of the lion: ");
                             string lionName = Console.ReadLine();
-                            Console.WriteLine("Enter the species of the lion");
+                            Console.Write("Enter the species of the lion");
 
                             string lionSpecies = Console.ReadLine();
 
@@ -51,23 +51,41 @@ namespace comp003a.assignment_6
                     case "2":
                         try
                         {
+                            Console.Write("Enter the name of the Parrot: ");
+                            string parrotName = Console.ReadLine();
+                            Console.Write("Enter the species of the parrot: ");
 
+                            string parrotSpecies = Console.ReadLine();
+
+                            Parrot parrot = new Parrot { Name = parrotName, Species = parrotSpecies };
                         }
-
+                        catch (ArgumentException ex) // Handle errors
+                        {
+                            Console.WriteLine($"Error: {ex.Message}"); // Display error message
+                        }
+                        break;
 
                     case "3":
                         try
                         {
 
                         }
-
+                        catch (ArgumentException ex) // Handle errors
+                        {
+                            Console.WriteLine($"Error: {ex.Message}"); // Display error message
+                        }
+                        break;
 
                     case "4":
                         try
                         {
 
                         }
-
+                        catch (ArgumentException ex) // Handle errors
+                        {
+                            Console.WriteLine($"Error: {ex.Message}"); // Display error message
+                        }
+                        break;
 
                     case "5":
                         try
