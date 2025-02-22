@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace comp003a.assignment_6
 {
-    internal class Lion
+    public class Lion : Animal
     {
+        public override void MakeSound()
+        {
+            Console.WriteLine("The Lion roars");
+        }
     }
 }

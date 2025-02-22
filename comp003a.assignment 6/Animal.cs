@@ -34,10 +34,11 @@ namespace comp003a.assignment_6
                 {
                     Console.WriteLine("Name cannot be empty or null ");
                 }
+                _species = value;
             }
         }
 
+        public abstract void MakeSound();
 
     }
-
 }
