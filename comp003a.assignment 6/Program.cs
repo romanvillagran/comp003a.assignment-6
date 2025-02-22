@@ -35,10 +35,10 @@ namespace comp003a.assignment_6
 
                             string lionSpecies = Console.ReadLine();
 
-                            Lion lion = new Lion { Name = lionName, Species = lionSpecies};
+                            Lion lion = new Lion { Name = lionName, Species = lionSpecies };
 
                             animal.Add(lion);
-                            Console.WriteLine("Lion has been added"); 
+                            Console.WriteLine("Lion has been added");
                         }
                         catch (ArgumentException ex) // Handle errors
                         {
@@ -65,39 +65,52 @@ namespace comp003a.assignment_6
                         }
                         break;
 
-                    case "3": 
+                    case "3":
                         Console.WriteLine("Displaying all animals:");
-                        if (animal.Count == 0) 
+                        if (animal.Count == 0)
                         {
-                            Console.WriteLine("No animals in the zoo yet!"); 
+                            Console.WriteLine("No animals in the zoo yet!");
                         }
                         else
                         {
-                           
-                            for (int i = 0; i < animal.Count; i++) 
+
+                            for (int i = 0; i < animal.Count; i++)
                             {
-                                if (animal[i] != null) 
+                                if (animal[i] != null)
                                 {
-                                    animal[i].MakeSound(); 
-                                    Console.WriteLine($"Name: {animal[i].Name}, Species: {animal[i].Species}"); 
+                                    animal[i].MakeSound();
+                                    Console.WriteLine($"Name: {animal[i].Name}, Species: {animal[i].Species}");
                                 }
                             }
                         }
                         break;
 
                     case "4":
-                        try
+                        Console.WriteLine("Choose an option to describe an animal:");
+                        Console.WriteLine("1. By Name");
+                        Console.WriteLine("2. By Name and Species");
+                        Console.WriteLine("3. By Name, Species, and Age");
+
+                        string describeChoice = Console.ReadLine();
+                        switch (describeChoice)
                         {
+                            case "1": // Describe by name
+                                Console.Write("Enter the name: ");
+                                string name = Console.ReadLine();
+                                ZooUtility.DescribeAnimal(name);
+                                break;
+
+                            case "2":
+
+
+
+
 
                         }
-                      
                         break;
 
                     case "5":
-                        try
-                        {
 
-                        }
 
                 }
             }
